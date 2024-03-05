@@ -75,25 +75,25 @@ revoke 权限 on 数据库.表 from '用户名@允许访问的主机名%'	授予
 
 > ### 字符串函数
 
-![image-20240302163905257](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302163905257.png)
+![image-20240302163905257](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302163905257.png)
 
 -------
 
 > ### 数值函数
 
-![image-20240302164118982](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302164118982.png)
+![image-20240302164118982](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302164118982.png)
 
 -------
 
 > ### 日期函数
 
-![image-20240302164506145](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302164506145.png)
+![image-20240302164506145](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302164506145.png)
 
 -------
 
 > ### 流程函数
 
-![image-20240302165219409](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302165219409.png)
+![image-20240302165219409](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302165219409.png)
 
 
 
@@ -101,11 +101,11 @@ revoke 权限 on 数据库.表 from '用户名@允许访问的主机名%'	授予
 
 约束是作用于表中字段的规则，用于限制存储在表中的数据 保证数据的准确性、一致性和完整性
 
-![image-20240302170522838](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302170522838.png)
+![image-20240302170522838](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302170522838.png)
 
 > ### 例
-> ![image-20240302170552887](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302170552887.png)
-> ![image-20240302170618647](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302170618647.png)
+> ![image-20240302170552887](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302170552887.png)
+> ![image-20240302170618647](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302170618647.png)
 
 -------
 
@@ -113,7 +113,7 @@ revoke 权限 on 数据库.表 from '用户名@允许访问的主机名%'	授予
 >
 > 把两张表之间建立起连接，从而保证数据的一致性和完整性
 >
-> ![image-20240302171033465](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302171033465.png)
+> ![image-20240302171033465](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302171033465.png)
 
 ```mysql
 constraint '外键名称' foreign key('外键字段名') reference '主表(主表列名)'	在创建表时添加外键约束
@@ -127,7 +127,7 @@ alter table '表名' drop foreign key '外键名称'	删除外键
 >
 > 默认为 `no action` 即 `restrict`
 
-![image-20240302172157969](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302172157969.png)
+![image-20240302172157969](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302172157969.png)
 
 ```mysql
 on update '行为' on delete '行为'	设置外键行为
@@ -232,7 +232,7 @@ select * from emp where salary > 50
 
 ​	**标量子查询：**
 
-![image-20240302192855563](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302192855563.png)
+![image-20240302192855563](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302192855563.png)
 
 ```mysql
 select * from t1 where dept = (select id from t2 where name = '销售部')	#查询销售部的数据
@@ -242,7 +242,7 @@ select * from t1 where dept = (select id from t2 where name = '销售部')	#查�
 
 ​	**列子查询：**
 
-![image-20240302192938218](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302192938218.png)
+![image-20240302192938218](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302192938218.png)
 
 ```mysql
 #查询年龄为18和20的数据
@@ -253,7 +253,7 @@ select * from t1 where id in (select id from t2 where age = '18' or age = '20')
 
 **行子查询：**
 
-![image-20240302193633544](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302193633544.png)
+![image-20240302193633544](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302193633544.png)
 
 ```mysql
 select * from emp where salary = 12500 and managerid = 1;
@@ -268,7 +268,7 @@ select * from emp where (salary,managerid) = (select salary,managerid from emp w
 
 **表子查询：**
 
-![image-20240302194330083](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302194330083.png)
+![image-20240302194330083](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302194330083.png)
 
 ```mysql
 #查询与张三或者李四薪资和工作相同的员工 （in 包含 即多项匹配） 
@@ -333,17 +333,17 @@ rollback;
 
 > ## 事务的四大特性 ACID
 
-![image-20240302200409296](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302200409296.png)
+![image-20240302200409296](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302200409296.png)
 
 -----------------------
 
 > ## 并发事务问题
 
-![image-20240302200906544](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302200906544.png)
+![image-20240302200906544](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302200906544.png)
 
 > ## 事务隔离级别
 
-![image-20240302201107477](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240302201107477.png)
+![image-20240302201107477](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240302201107477.png)
 
 - Read uncommitted 读未提交 *效率最高*
 
@@ -399,7 +399,7 @@ rollback;
 
 > #### InnoDB逻辑存储结构
 
-![image-20240303160803691](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303160803691.png)
+![image-20240303160803691](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303160803691.png)
 
 ----------------------
 
@@ -407,25 +407,25 @@ rollback;
 
 > ### MyISAM
 >
-> ![image-20240303161556583](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303161556583.png)
+> ![image-20240303161556583](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303161556583.png)
 
 -----------------
 
 > ### Memory
 >
-> ![image-20240303161528276](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303161528276.png)
+> ![image-20240303161528276](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303161528276.png)
 
 -------------------
 
 ### 存储引擎的特点及区别
 
-![image-20240303161803222](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303161803222.png)
+![image-20240303161803222](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303161803222.png)
 
 --------------------
 
 ### 存储引擎的选择
 
-![image-20240303161920372](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303161920372.png)
+![image-20240303161920372](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303161920372.png)
 
 
 
@@ -437,7 +437,7 @@ rollback;
 
 ​	***优缺点：***
 
-![image-20240303172524534](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303172524534.png)
+![image-20240303172524534](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303172524534.png)
 
 ----------------
 
@@ -445,11 +445,11 @@ rollback;
 
 > #### MySQL的索引是在存储引擎层实现的，不同的存储引擎有不同的结构
 
-![image-20240303172821863](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303172821863.png)
+![image-20240303172821863](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303172821863.png)
 
 > #### 不同存储引擎对不同索引结构的支持情况
 
-![image-20240303172933422](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303172933422.png)
+![image-20240303172933422](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303172933422.png)
 
 ---------------------
 
@@ -465,13 +465,13 @@ rollback;
 
 ### 索引分类
 
-![image-20240303185218580](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303185218580.png)
+![image-20240303185218580](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303185218580.png)
 
 > #### 聚集索引
 >
 > 选取主键作为聚集索引的值	叶子节点所挂载的数据为整个 row 的值
 
-![image-20240303185244057](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303185244057.png)
+![image-20240303185244057](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303185244057.png)
 
 > #### 二级索引
 >
@@ -479,7 +479,7 @@ rollback;
 >
 > ***回表查询：通过属性查找row的全部值时 先通过二级索引查找所对应的主键ID 再通过主键ID使用聚集索引查找row的全部值***
 
-![image-20240303185429023](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303185429023.png)
+![image-20240303185429023](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303185429023.png)
 
 ---------------
 
@@ -534,7 +534,7 @@ show [session/global] status like 'Com_______';
 >
 > **`force`** 是强制是采取索引
 
-![image-20240303203228607](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303203228607.png)
+![image-20240303203228607](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303203228607.png)
 
 --------------
 
@@ -556,7 +556,7 @@ create index '索引名' on '表名(字段名(n))'	# n为前缀长度
 
 > 前缀索引长度
 >
-> ![image-20240303205217296](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240303205217296.png)
+> ![image-20240303205217296](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240303205217296.png)
 -----------------
 
 ### 索引使用规则
@@ -583,7 +583,7 @@ create index '索引名' on '表名(字段名(n))'	# n为前缀长度
 
 > #### 索引设计原则
 
-![image-20240304144817245](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304144817245.png)
+![image-20240304144817245](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304144817245.png)
 
 
 
@@ -604,7 +604,7 @@ create index '索引名' on '表名(字段名(n))'	# n为前缀长度
 >    ```mysql
 >    #设置全局参数local_infile为1，开启从本地加载文件导入数据的开关
 >    set global local_infile=1;
->                                                    
+>                                                       
 >    #执行load指令将准备好的.sql数据文件加载到表结构中
 >    load data local infile '/root/sql1.sql' into table 'tb_user' fields terminated by ',' lines terminated by '/n';
 >    ```
@@ -687,7 +687,7 @@ create index '索引名' on '表名(字段名(n))'	# n为前缀长度
 
 > 一种虚拟存在的表，类似一个观察db数据的窗口
 >
-> ![image-20240304183535622](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304183535622.png)
+> ![image-20240304183535622](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304183535622.png)
 
 ```mysql
 #创建视图 创建时or replace可以不加
@@ -722,11 +722,11 @@ drop view '视图名称'
 
 --------------------
 
-![image-20240304190557817](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304190557817.png)
+![image-20240304190557817](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304190557817.png)
 
 ---------------------
 
-![image-20240304191002057](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304191002057.png)
+![image-20240304191002057](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304191002057.png)
 
 ---------------------
 
@@ -765,25 +765,25 @@ drop procedure 存储过程名称;
 > >
 > >  默认是 `session`
 > >
-> >  ![image-20240304192206168](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304192206168.png)
+> >  ![image-20240304192206168](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304192206168.png)
 >
 > > ##### 用户定义变量
 > >
 > > 只有 `session`	会话有效
 > >
-> > ![image-20240304192400871](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304192400871.png)
+> > ![image-20240304192400871](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304192400871.png)
 >
 > > ##### 局部变量
 > >
 > > 只在该存储过程中生效	声明范围是 begin ... end 块
 > >
-> > ![image-20240304192710055](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304192710055.png)
+> > ![image-20240304192710055](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304192710055.png)
 
 --------------
 
 >#### if语法
 >
->![image-20240304192825227](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304192825227.png)
+>![image-20240304192825227](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304192825227.png)
 
 -------------------
 
@@ -791,25 +791,25 @@ drop procedure 存储过程名称;
 >
 >类似于方法的形参
 >
->![image-20240304193100804](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304193100804.png)
+>![image-20240304193100804](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304193100804.png)
 
 --------------
 
 >#### case语法
 >
->![image-20240304193152168](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304193152168.png)
+>![image-20240304193152168](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304193152168.png)
 
 --------------
 
 >#### while语法 满足条件则循环
 >
->![image-20240304193304703](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304193304703.png)
+>![image-20240304193304703](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304193304703.png)
 
 --------------
 
 >#### repeat语法 满足条件则退出循环
 >
->![image-20240304193329176](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304193329176.png)
+>![image-20240304193329176](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304193329176.png)
 
 --------------
 
@@ -819,13 +819,13 @@ drop procedure 存储过程名称;
 >
 >==**需要给循环起名字 label_name : loop**==
 >
->![image-20240304193815941](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304193815941.png)
+>![image-20240304193815941](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304193815941.png)
 
 --------------
 
 >#### 游标语法
 >
->![image-20240304193958287](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304193958287.png)
+>![image-20240304193958287](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304193958287.png)
 >
 >
 
@@ -833,13 +833,13 @@ drop procedure 存储过程名称;
 
 >#### 条件处理程序 (try_catch)	设置当满足（）时触发
 >
->![image-20240304194450182](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304194450182.png)
+>![image-20240304194450182](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304194450182.png)
 
 --------------
 
 ### 存储函数
 
->![image-20240304194401884](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304194401884.png)
+>![image-20240304194401884](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304194401884.png)
 
 -------------------------------
 
@@ -855,7 +855,7 @@ drop procedure 存储过程名称;
 
 > #### 别名
 
-![image-20240304195126758](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304195126758.png)
+![image-20240304195126758](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304195126758.png)
 
 ---------------------
 
@@ -903,7 +903,7 @@ unlock tables;
 
 > #### 特点
 >
-> ![image-20240304201145077](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304201145077.png)
+> ![image-20240304201145077](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304201145077.png)
 
 **也可以通过加参数 `--single-transaction` 来完成不加锁备份保证数据的一致性**
 
@@ -929,7 +929,7 @@ mysqldump --single-transaction -u root -p 123123 > itcast.sql
 >    ```mysql
 >    #加锁
 >    lock tables '表名' read/write
->    
+>       
 >    #释放锁
 >    unlock tables
 >    ```
@@ -952,7 +952,7 @@ mysqldump --single-transaction -u root -p 123123 > itcast.sql
 >
 > ***排他锁和共享锁、排他锁都是互斥的***
 >
-> ![image-20240304202341991](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304202341991.png)
+> ![image-20240304202341991](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304202341991.png)
 >
 > ------------------------------
 
@@ -986,7 +986,7 @@ mysqldump --single-transaction -u root -p 123123 > itcast.sql
 >
 >锁定单行记录的锁，防止其他事务对此行操作，在RC、RR隔离级别下支持
 >
->![image-20240304204104935](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304204104935.png)
+>![image-20240304204104935](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304204104935.png)
 >
 >1. **共享锁（S）**允许一个事务读取一行，与其他事务相同数据集的排他锁互斥
 >2. **排他锁（X）**允许获取排他锁的事务更新数据，与其他事务相同数据集的共享锁和排他锁互斥
@@ -997,7 +997,7 @@ mysqldump --single-transaction -u root -p 123123 > itcast.sql
 >
 >锁定索引记录的间隙，确保索引记录的间隙不变，防止其他事务对其insert，产生幻读，在RR隔离级别下支持
 >
->![image-20240304204124764](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304204124764.png)
+>![image-20240304204124764](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304204124764.png)
 >
 >------------------
 
@@ -1005,13 +1005,13 @@ mysqldump --single-transaction -u root -p 123123 > itcast.sql
 >
 >行锁和间隙锁的组合，同时锁住数据和数据前面的间隙，在RR隔离级别下支持
 >
->![image-20240304204338045](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304204338045.png)
+>![image-20240304204338045](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304204338045.png)
 >
 >------------------
 
 ### ***锁的优化和退化***
 
-![image-20240305162032177](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240305162032177.png)
+![image-20240305162032177](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240305162032177.png)
 
 > **上文中自动加锁指的是加临键锁（MySQL默认的锁）**
 >
@@ -1025,10 +1025,10 @@ mysqldump --single-transaction -u root -p 123123 > itcast.sql
 
 > *注意是否有索引以及索引是否唯一*
 
-![image-20240305163243058](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240305163243058.png)
+![image-20240305163243058](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240305163243058.png)
 
 
 
-![image-20240304204900132](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304204900132.png)
+![image-20240304204900132](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304204900132.png)
 
-![image-20240304204918901](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20240304204918901.png)
+![image-20240304204918901](https://github.com/ZMZER/Notes/blob/5a489de72b91be3a31427bbbc0a89abd03fd94ea/MySQL/images/image-20240304204918901.png)
